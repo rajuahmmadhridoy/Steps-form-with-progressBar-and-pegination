@@ -1,0 +1,37 @@
+.circle{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: green;
+    color: #fff;
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+.stepWrapper{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.stepBlock .circleWrapper{
+    padding: 0px 20px;
+    position: relative;
+}
+
+.selected .circle{
+    color: black;
+    background-color: white;
+    border: 2px solid green;
+}
+
+.stepBlock:not(:last-child) > .circleWrapper::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color:green;
+    margin: auto;
+    z-index: -1;
+}
